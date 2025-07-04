@@ -36,4 +36,10 @@ class LinkController extends Controller
         $link = Link::where('slug', $slug)->firstOrFail();
         return redirect($link->original_url);
     }
+
+    public function destroy(Link $link)
+    {
+        $link->delete();
+        return redirect()->route('links.index')->with('success', 'Link deleted successfully.');
+    }
 }

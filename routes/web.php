@@ -10,3 +10,4 @@ Route::post('/store', [LinkController::class, 'store'])->name('links.store');
 
 // Shortened redirect route
 Route::get('/{slug}', [LinkController::class, 'redirect'])->name('links.redirect');
+Route::delete('/links/{link}', [LinkController::class, 'destroy'])->name('links.destroy');
