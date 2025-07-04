@@ -1,0 +1,9 @@
+input {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+td {
+    word-break: break-all;
+}

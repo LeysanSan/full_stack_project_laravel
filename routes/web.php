@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\LinkController;
+
+Route::get('/', [LinkController::class, 'index'])->name('links.index');
+Route::get('/create', [LinkController::class, 'create'])->name('links.create');
+Route::post('/store', [LinkController::class, 'store'])->name('links.store');
+
+// Shortened redirect route
+Route::get('/{slug}', [LinkController::class, 'redirect'])->name('links.redirect');
