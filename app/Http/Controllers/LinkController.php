@@ -12,7 +12,7 @@ class LinkController extends Controller
     //
     public function index()
     {
-        $links = Link::all();
+        $links = Link::orderBy('created_at', 'desc')->paginate(10);
         return view('links.index', compact('links'));
     }
     public function create()

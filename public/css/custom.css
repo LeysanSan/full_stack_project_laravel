@@ -7,3 +7,24 @@ input {
 td {
     word-break: break-all;
 }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+table td,
+table th {
+    word-break: break-word;
+    white-space: normal;
+    max-width: auto;
+    /* adjust max width as needed */
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
